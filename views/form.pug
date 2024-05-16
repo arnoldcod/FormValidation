@@ -1,0 +1,58 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title GENQ KYC FORM
+
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet')
+  link(rel='stylesheet' href='/css/form.css')
+.container.mt-5
+  .row.justify-content-center
+    .col-md-6
+      h2.text-center.text-bg-dark.mb-4 GENQ KYC FORM
+      form#kycForm(onsubmit='return validation(event)' action='/form' method='POST')
+        .mb-3
+          label.form-label(for='field1') Bio Data 
+          hr.underline
+          .row
+            .col
+              input#firstName.form-control(type='text' placeholder='First Name' name='firstName' )
+              p
+              input#dob.form-control(type='date' placeholder='Date Of Birth (DD/MM/YY)' name='dob')
+            .col
+              input#lastName.form-control(type='text' placeholder='Last Name' name='lastName' )
+              p
+              select#gender.form-control(name='gender')
+                option(value='') Select Gender
+                option(value='male') Male
+                option(value='female') Female
+        .mb-3
+          label.form-label(for='location') Location
+          hr.underline
+          .row
+            .col
+              input#country.form-control(type='text' placeholder='Country' name='country' )
+              p
+              input#town.form-control(type='text' placeholder='Town' name='town' )
+            .col
+              input#state.form-control(type='text' placeholder='State/ District' name='state' )
+              p
+              input#zip.form-control(type='text' placeholder='Zip Code' name= 'zip')
+        .mb-3
+          label.form-label(for='contactAndAddress') Contacts and Address
+          hr.underline
+          .row
+            .col
+              input#phone1.form-control(type='number' placeholder='Phone Number 1' name='phone1')
+            .col
+              input#phone2.form-control(type='number' placeholder='Phone Number 2' name='phone2')
+          p
+          input#email.form-control(type='email' placeholder='Email' name='email' )
+        .text-end
+          button.btn.btn-warning.btn-lg(type='submit') Submit
+      #alertPlaceholder
+
+
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js')
+script(src='/js/form.js')
+

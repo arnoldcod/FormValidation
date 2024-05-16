@@ -1,0 +1,15 @@
+  /* Custom CSS */
+  .form-label {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.underline {
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+.is-invalid {
+    border-color: red;
+}
+.is-valid {
+    border-color: green;
+}
